@@ -53,7 +53,11 @@ public class Frag_Register extends Fragment {
                     if(!password.equals(passwordAgain))
                     {
                         Toast.makeText(getContext(), "Mật khẩu xác nhận không khớp !", Toast.LENGTH_SHORT).show();
-                    } else if (accountHandler.checkUser(username, password)) {
+                    }
+                    else if(getPassword.length() < 6){
+                        Toast.makeText(getContext(), "Vui lòng nhập ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
+                    }
+                    else if (accountHandler.checkUser(username, password)) {
                         Toast.makeText(getContext(), "Tài khoản đã tồn tại !", Toast.LENGTH_SHORT).show();
                     } else {
                         if (accountHandler.AddAccount(username, password)) {

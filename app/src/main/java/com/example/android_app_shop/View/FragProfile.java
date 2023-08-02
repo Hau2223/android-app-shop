@@ -56,6 +56,8 @@ public class FragProfile extends Fragment {
                 if(!(PS_changeAgain.equals(PS_change)))
                 {
                     Toast.makeText(getContext(), "Mật khẩu xác nhận không khớp !", Toast.LENGTH_SHORT).show();
+                } else if(inputChangePassWord.length() < 6){
+                    Toast.makeText(getContext(), "Vui lòng nhập ít nhất 6 ký tự!", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     accountHandler.ChangePassword(username , PS_change );
