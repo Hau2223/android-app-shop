@@ -3,6 +3,7 @@
     android:layout_marginTop="30dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="50dp"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -48,7 +49,18 @@
                 android:padding="16dp"
                 android:clipToPadding="false"
                 android:scrollbars="none"
-                />
+                >
+
+            </GridView>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/TV_SeeAll"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xem thêm" />
         </LinearLayout>
     </FrameLayout>
 </ScrollView>
